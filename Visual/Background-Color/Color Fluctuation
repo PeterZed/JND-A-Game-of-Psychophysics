@@ -1,0 +1,7 @@
+function colorFluctuation() {
+  var changingAttribute = attributeDetermination();
+  
+  attributeFluctuation(changingAttribute);
+  checkColorLevelLimits();
+  setBackgroundColor();  
+}

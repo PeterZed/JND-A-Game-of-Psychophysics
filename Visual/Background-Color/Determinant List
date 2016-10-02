@@ -1,14 +1,18 @@
 var determinantList = {
   time: {
-    waitTimeMean = 8000; // milliseconds
-    waitTimeStandardDeviation = 2000; // milliseconds;
+    waitTimeMean: 1000; // milliseconds
+    waitTimeStandardDeviation = 0; // milliseconds;
   },
   hue: {
+    fluctuationMean: 1,
+    fluctuationStdDev: 0
   },
   saturation: {
+    fluctuationMean: 1,
+    fluctuationStdDev: 0
   },
   value: {
+    fluctuationMean: 1,
+    fluctuationStdDev: 0
   }
-  fluctuationMean = 0;
-  fluctuationStandardDeviation = 2;
 };

@@ -1,12 +1,12 @@
 function generateRandomBackgroundColor() {
   var hue = MathUtils.statisticiansRounding((getRandom() * 360), 0);
-  determinantList.hue.angle = hue;
+  determinantList.hue.level = hue;
   
   var saturation = MathUtils.statisticiansRounding((getRandom() * 100), 0);
-  determinantList.saturation.percentage = saturation;
+  determinantList.saturation.level = saturation;
   
   var lightness = MathUtils.statisticiansRounding((getRandom() * 100), 0);
-  determinantList.lightness.percentage = lightness;
+  determinantList.lightness.level = lightness;
   
   document.body.style.backgroundColor = "hsl(" + hue + ", " + saturation + "%, " + lightness + "%)";
 }

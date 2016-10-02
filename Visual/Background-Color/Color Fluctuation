@@ -2,6 +2,6 @@ function colorFluctuation() {
   var changingAttribute = attributeDetermination();
   
   attributeFluctuation(changingAttribute);
-  checkAttributeLimits();
+  checkAttributesLimits();
   setBackgroundColor();  
 }

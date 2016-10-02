@@ -1,5 +1,5 @@
 function attributeDetermination() {
- var randomRoll = MathUtils.getRandom();
+ var randomRoll = getRandom();
  
  if (randomRoll <= 1/3) {
   return determinantList.hue;

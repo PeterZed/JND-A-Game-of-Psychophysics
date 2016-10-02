@@ -4,18 +4,17 @@ var determinantList = {
     waitTimeStandardDeviation = 0; // milliseconds;
   },
   hue: {
-    angle: null,    // Angle because, in the HSL model, hue is the circular component
-                    // of a cylindrical coordinate system
+    level: null,
     fluctuationMean: 1,
     fluctuationStdDev: 0
   },
   saturation: {
-    percentage: null,
+    level: null,
     fluctuationMean: 1,
     fluctuationStdDev: 0
   },
   lightness: {
-    percentage: null,
+    level: null,
     fluctuationMean: 1,
     fluctuationStdDev: 0
   }

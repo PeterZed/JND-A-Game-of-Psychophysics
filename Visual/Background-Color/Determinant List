@@ -5,17 +5,17 @@ var determinantList = {
   },
   hue: {
     level: null,
-    fluctuationMean: 1,
-    fluctuationStdDev: 0
+    fluctuationMean: 0,
+    fluctuationStdDev: 1
   },
   saturation: {
     level: null,
-    fluctuationMean: 1,
-    fluctuationStdDev: 0
+    fluctuationMean: 0,
+    fluctuationStdDev: 1
   },
   lightness: {
     level: null,
-    fluctuationMean: 1,
-    fluctuationStdDev: 0
+    fluctuationMean: 0,
+    fluctuationStdDev: 1
   }
 };

@@ -1,7 +1,7 @@
 var determinantList = {
   time: {
-    waitTimeMean: 1000; // milliseconds
-    waitTimeStandardDeviation = 0; // milliseconds;
+    waitTimeMean: 1000, // milliseconds
+    waitTimeStandardDeviation: 0 // milliseconds;
   },
   hue: {
     level: null,

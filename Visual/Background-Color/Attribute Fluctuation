@@ -1,0 +1,9 @@
+function attributeFluctuation(changingAttribute) {
+  var mean = changingAttribute.fluctuationMean;
+  var variance = Math.pow(changingAttribute.fluctuationStdDev, 2);
+  
+  var distribution = gaussian(mean, variance);
+  var sample = distribution.ppf(getRandom());
+  
+  changingAttribute.level += sample;
+}

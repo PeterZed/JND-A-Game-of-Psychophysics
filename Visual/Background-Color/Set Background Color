@@ -1,7 +1,7 @@
 function setBackgroundColor() {
-  var hue = determinantsList.hue.level;
-  var saturation = determinantsList.saturation.level;
-  var lightness = determinantsList.lightness.level;
+  var hue = determinantList.hue.level;
+  var saturation = determinantList.saturation.level;
+  var lightness = determinantList.lightness.level;
   
   document.body.style.backgroundColor = "hsl(" + hue + ", " + saturation + "%, " + lightness + "%)";
 }

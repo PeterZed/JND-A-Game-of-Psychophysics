@@ -1,4 +1,4 @@
-function attributeFluctuation(changingAttribute) {
+function fluctuateAttribute(changingAttribute) {
   var mean = changingAttribute.fluctuationMean;
   var variance = Math.pow(changingAttribute.fluctuationStdDev, 2);
   

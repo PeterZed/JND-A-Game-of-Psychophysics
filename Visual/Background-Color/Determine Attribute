@@ -2,10 +2,10 @@ function determineAttribute() {
  var randomRoll = getRandom();
  
  if (randomRoll <= 1/3) {
-  return determinantList.hue;
+  return fluctuationDeterminantList.hue;
  } else if (randomRoll <= 2/3) {
-  return determinantList.saturation;
+  return fluctuationDeterminantList.saturation;
  } else if (randomRoll <= 1) {
-  return determinantList.lightness;
+  return fluctuationDeterminantList.lightness;
  }
 }

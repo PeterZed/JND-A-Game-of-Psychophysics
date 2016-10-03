@@ -1,4 +1,4 @@
-function colorFluctuation() {
+function fluctuationExecution() {
   var changingAttribute = attributeDetermination();
   
   attributeFluctuation(changingAttribute);

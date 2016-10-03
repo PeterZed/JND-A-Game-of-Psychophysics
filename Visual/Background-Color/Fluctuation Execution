@@ -1,7 +1,7 @@
 function fluctuationExecution() {
-  var changingAttribute = attributeDetermination();
+  var changingAttribute = determineAttribute();
   
-  attributeFluctuation(changingAttribute);
-  checkAttributesLimits();
+  fluctuateAttribute(changingAttribute);
+  checkLimitsOfAttributes();
   setBackgroundColor();  
 }

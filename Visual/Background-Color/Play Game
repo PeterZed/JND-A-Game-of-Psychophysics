@@ -1,4 +1,4 @@
 function playGame() {
   generateRandomBackgroundColor();
-  window.colorInterval = setInterval(fluctuationExecution, determinantList.time.waitTimeMean);
+  window.colorInterval = setInterval(executeFluctuation, determinantList.time.waitTimeMean);
 }

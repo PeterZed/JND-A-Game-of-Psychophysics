@@ -1,19 +1,19 @@
 function checkLimitsOfAttributes() {
-  if (determinantList.hue.level < 0) {
-    determinantList.hue.level += 360;
-  } else if (determinantList.hue.level > 360) {
-    determinantList.hue.level -= 360;
+  if (fluctuationDeterminantList.hue.level < 0) {
+    fluctuationDeterminantList.hue.level += 360;
+  } else if (fluctuationDeterminantList.hue.level > 360) {
+    fluctuationDeterminantList.hue.level -= 360;
   }
   
-  if (determinantList.saturation.level < 0) {
-    determinantList.saturation.level = 0;
-  } else if (determinantList.saturation.level > 100) {
-    determinantList.saturation.level = 100;
+  if (fluctuationDeterminantList.saturation.level < 0) {
+    fluctuationDeterminantList.saturation.level = 0;
+  } else if (fluctuationDeterminantList.saturation.level > 100) {
+    fluctuationDeterminantList.saturation.level = 100;
   }
   
-  if (determinantList.lightness.level < 0) {
-    determinantList.lightness.level = 0;
-  } else if (determinantList.lightness.level > 100) {
-    determinantList.lightness.level = 100;
+  if (fluctuationDeterminantList.lightness.level < 0) {
+    fluctuationDeterminantList.lightness.level = 0;
+  } else if (fluctuationDeterminantList.lightness.level > 100) {
+    fluctuationDeterminantList.lightness.level = 100;
   }
 }

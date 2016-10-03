@@ -1,4 +1,4 @@
-function checkAttributesLimits() {
+function checkLimitsOfAttributes() {
   if (determinantList.hue.level < 0) {
     determinantList.hue.level += 360;
   } else if (determinantList.hue.level > 360) {

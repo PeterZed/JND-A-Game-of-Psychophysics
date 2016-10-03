@@ -1,4 +1,4 @@
-var determinantList = {
+var fluctuationDeterminantList = {
   time: {
     waitTimeMean: 1000, // milliseconds
     waitTimeStandardDeviation: 0 // milliseconds;

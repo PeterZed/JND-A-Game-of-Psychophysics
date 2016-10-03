@@ -1,4 +1,4 @@
-function attributeDetermination() {
+function determineAttribute() {
  var randomRoll = getRandom();
  
  if (randomRoll <= 1/3) {

@@ -1,4 +1,4 @@
-function fluctuationExecution() {
+function executeFluctuation() {
   var changingAttribute = determineAttribute();
   
   fluctuateAttribute(changingAttribute);

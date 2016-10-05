@@ -1,4 +1,4 @@
-function determineChangingAttribute() {
+function determineFluctuatingAttribute() {
  var randomRoll = getRandom();
  
  if (randomRoll <= 1/3) {

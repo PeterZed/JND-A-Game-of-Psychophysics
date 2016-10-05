@@ -46,11 +46,10 @@ class BackgroundColor {
   }
   
   fluctuateBackgroundColor() {
-    var fluctuatingAttribute = this.bind.(this, determineFluctuatingAttribute());
-  
-    this.fluctuateAttribute(fluctuatingAttribute);
-    this.checkLimitsOfAttributes();
-    this.setBackgroundColor();  
+    var fluctuatingAttribute = this.determineFluctuatingAttribute.call(this);  
+    this.fluctuateAttribute.call(this, fluctuatingAttribute);
+    this.checkLimitsOfAttributes.call(this);
+    this.setBackgroundColor.call(this);  
   }
   
   determineFluctuatingAttribute() {

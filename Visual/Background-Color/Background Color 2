@@ -4,7 +4,7 @@ var backgroundColor = {
   lightness: null
 };
 
-var backgroundColorFluctuationFactors = {
+var fluctuationFactors = {
   time: {
     waitTimeMean: 1000, // milliseconds
     waitTimeStandardDeviation: 0 // milliseconds;

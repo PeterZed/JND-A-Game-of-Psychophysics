@@ -46,7 +46,7 @@ class BackgroundColor {
   }
   
   fluctuateBackgroundColor() {
-    var fluctuatingAttribute = this.determineFluctuatingAttribute();
+    var fluctuatingAttribute = this.bind.(this, determineFluctuatingAttribute());
   
     this.fluctuateAttribute(fluctuatingAttribute);
     this.checkLimitsOfAttributes();
@@ -54,7 +54,7 @@ class BackgroundColor {
   }
   
   determineFluctuatingAttribute() {
-    var randomRoll = getRandom();
+    var randomRoll = randomNumbers.getRandom();
  
     if (randomRoll <= 1/3) {
       return this.hue;

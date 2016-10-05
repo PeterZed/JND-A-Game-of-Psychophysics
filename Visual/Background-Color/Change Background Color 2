@@ -36,7 +36,6 @@ debugger;
   },
   
  fluctuateAttribute: function(color, fluctuatingAttribute) {
- debugger;
     var mean = fluctuationFactors[fluctuatingAttribute].fluctuationMean;
     var variance = Math.pow(fluctuationFactors[fluctuatingAttribute].fluctuationStdDev, 2);
   

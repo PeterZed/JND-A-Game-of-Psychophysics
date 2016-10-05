@@ -1,5 +1,6 @@
 function playGame() {
   var backgroundColor = new BackgroundColor();
 
-  window.colorInterval = setInterval(executeFluctuation, fluctuationDeterminantList.time.waitTimeMean);
+  window.colorInterval = setInterval(backgroundColor.fluctuateBackgroundColor,
+    backgroundColor.time.waitTimeMean);
 }

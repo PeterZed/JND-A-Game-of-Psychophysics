@@ -24,7 +24,7 @@ debugger;
   },
   
   determineFluctuatingAttribute: function(color) {
-    var randomRoll = randomNumbers.getRandom();
+    var randomRoll = randomNumbers.getRandomNumber();
  
     if (randomRoll <= 1/3) {
       return "hue";

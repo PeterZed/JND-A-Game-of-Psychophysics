@@ -1,7 +1,0 @@
-function executeFluctuation() {
-  var fluctuatingAttribute = determineFluctuatingAttribute();
-  
-  fluctuateAttribute(fluctuatingAttribute);
-  checkLimitsOfAttributes();
-  setBackgroundColor();  
-}

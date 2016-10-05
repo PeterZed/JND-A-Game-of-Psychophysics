@@ -1,8 +1,0 @@
-function generateRandomBackgroundColor() {
-  fluctuationDeterminantList.hue.level =
-    UnbiasedRounding.statisticiansRounding((getRandom() * 360), 0);
-  fluctuationDeterminantList.saturation.level =
-    UnbiasedRounding.statisticiansRounding((getRandom() * 100), 0);
-  fluctuationDeterminantList.lightness.level =
-    UnbiasedRounding.statisticiansRounding((getRandom() * 100), 0);
-}

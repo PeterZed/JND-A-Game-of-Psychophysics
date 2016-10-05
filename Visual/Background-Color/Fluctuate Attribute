@@ -1,6 +1,6 @@
-function fluctuateAttribute(changingAttribute) {
-  var mean = changingAttribute.fluctuationMean;
-  var variance = Math.pow(changingAttribute.fluctuationStdDev, 2);
+function fluctuateAttribute(fluctuatingAttribute) {
+  var mean = fluctuatingAttribute.fluctuationMean;
+  var variance = Math.pow(fluctuatingAttribute.fluctuationStdDev, 2);
   
   var distribution = gaussian(mean, variance);
   var sample = distribution.ppf(getRandom());

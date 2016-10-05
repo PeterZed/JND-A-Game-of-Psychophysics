@@ -2,6 +2,7 @@ function playGame() {
   changeColor.randomizeColorAttributes(backgroundColor);
   changeColor.setBackgroundColor(backgroundColor);
   
-  window.colorInterval = setInterval(changeColor.fluctuateBackgroundColor(backgroundColor),
+  // For testing, so that clearInterval(colorInterval) can be run as needed
+  window.colorInterval = setInterval(changeColor.fluctuateBackgroundColor.bind(changeColor, backgroundColor),
     fluctuationFactors.time.waitTimeMean);
 }

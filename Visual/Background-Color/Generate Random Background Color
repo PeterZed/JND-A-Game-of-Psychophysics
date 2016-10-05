@@ -1,12 +1,8 @@
 function generateRandomBackgroundColor() {
-  var hue = MathUtils.statisticiansRounding((getRandom() * 360), 0);
-  fluctuationDeterminantList.hue.level = hue;
-  
-  var saturation = MathUtils.statisticiansRounding((getRandom() * 100), 0);
-  fluctuationDeterminantList.saturation.level = saturation;
-  
-  var lightness = MathUtils.statisticiansRounding((getRandom() * 100), 0);
-  fluctuationDeterminantList.lightness.level = lightness;
-  
-  document.body.style.backgroundColor = "hsl(" + hue + ", " + saturation + "%, " + lightness + "%)";
+  fluctuationDeterminantList.hue.level =
+    UnbiasedRounding.statisticiansRounding((getRandom() * 360), 0);
+  fluctuationDeterminantList.saturation.level =
+    UnbiasedRounding.statisticiansRounding((getRandom() * 100), 0);
+  fluctuationDeterminantList.lightness.level =
+    UnbiasedRounding.statisticiansRounding((getRandom() * 100), 0);
 }

@@ -11,10 +11,11 @@ var changeColor = {
   
   setBackgroundColor: function(color) {
     document.body.style.backgroundColor = "hsl(" + color.hue + ", " +
-      color.saturation + "%, " + lightness + "%)";
+      color.saturation + "%, " + color.lightness + "%)";
   },
   
   fluctuateBackgroundColor: function(color) {
+debugger;
     var fluctuatingAttribute = this.determineFluctuatingAttribute(color);
     
     this.fluctuateAttribute(color, fluctuatingAttribute);

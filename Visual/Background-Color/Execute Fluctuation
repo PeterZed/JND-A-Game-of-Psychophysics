@@ -1,5 +1,5 @@
 function executeFluctuation() {
-  var changingAttribute = determineAttribute();
+  var changingAttribute = determineChangingAttribute();
   
   fluctuateAttribute(changingAttribute);
   checkLimitsOfAttributes();

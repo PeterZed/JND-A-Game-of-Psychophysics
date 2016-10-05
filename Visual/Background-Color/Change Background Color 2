@@ -1,0 +1,67 @@
+var changeColor = {
+  randomizeColorAttributes: function(color) {
+    var hue = randomNumbers.getRandomNumber() * 360;
+    var saturation = randomNumbers.getRandomNumber() * 100;
+    var lightness = randomNumbers.getRandomNumber() * 100;
+  
+    color.hue = UnbiasedRounding.statisticiansRounding(hue, 0);
+    color.saturation = UnbiasedRounding.statisticiansRounding(saturation, 0);
+    color.lightness = UnbiasedRounding.statisticiansRounding(lightness, 0);
+  },
+  
+  setBackgroundColor: function(color) {
+    document.body.style.backgroundColor = "hsl(" + color.hue + ", " +
+      color.saturation + "%, " + color.lightness + "%)";
+  },
+  
+  fluctuateBackgroundColor: function(color) {
+debugger;
+    var fluctuatingAttribute = this.determineFluctuatingAttribute(color);
+    
+    this.fluctuateAttribute(color, fluctuatingAttribute);
+    this.checkLimitsOfAttributes(color);
+    this.setBackgroundColor(color);  
+  },
+  
+  determineFluctuatingAttribute: function(color) {
+    var randomRoll = randomNumbers.getRandom();
+ 
+    if (randomRoll <= 1/3) {
+      return "hue";
+    } else if (randomRoll <= 2/3) {
+      return "saturation";
+    } else if (randomRoll <= 1) {
+      return "lightness";
+    }
+  },
+  
+ fluctuateAttribute: function(color, fluctuatingAttribute) {
+    var mean = fluctuationFactors.fluctuatingAttribute.fluctuationMean;
+    var variance = Math.pow(fluctuationFactors.fluctuatingAttribute.fluctuationStdDev, 2);
+  
+    var distribution = gaussian(mean, variance);
+    var sample = distribution.ppf(randomNumbers.getRandomNumber());
+  
+    color.fluctuatingAttribute += sample;
+  },
+  
+  checkLimitsOfAttributes: function(color) {
+    if (color.hue < 0) {
+      color.hue += 360;
+    } else if (color.hue > 360) {
+      color.hue -= 360;
+    }
+  
+    if (color.saturation < 0) {
+      color.saturation = 0;
+    } else if (color.saturation > 100) {
+      color.saturation = 100;
+    }
+  
+    if (this.color < 0) {
+      color.lightness = 0;
+    } else if (color.lightness > 100) {
+      color.lightness = 100;
+    }
+  }
+};

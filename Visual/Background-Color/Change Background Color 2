@@ -36,13 +36,14 @@ debugger;
   },
   
  fluctuateAttribute: function(color, fluctuatingAttribute) {
-    var mean = fluctuationFactors.fluctuatingAttribute.fluctuationMean;
-    var variance = Math.pow(fluctuationFactors.fluctuatingAttribute.fluctuationStdDev, 2);
+ debugger;
+    var mean = fluctuationFactors[fluctuatingAttribute].fluctuationMean;
+    var variance = Math.pow(fluctuationFactors[fluctuatingAttribute].fluctuationStdDev, 2);
   
     var distribution = gaussian(mean, variance);
     var sample = distribution.ppf(randomNumbers.getRandomNumber());
   
-    color.fluctuatingAttribute += sample;
+    color[fluctuatingAttribute] += sample;
   },
   
   checkLimitsOfAttributes: function(color) {

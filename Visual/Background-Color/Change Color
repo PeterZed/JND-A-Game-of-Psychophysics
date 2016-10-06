@@ -57,7 +57,7 @@ var changeColor = {
       color.saturation = 100;
     }
   
-    if (this.color < 0) {
+    if (color.lightness < 0) {
       color.lightness = 0;
     } else if (color.lightness > 100) {
       color.lightness = 100;

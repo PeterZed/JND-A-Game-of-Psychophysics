@@ -15,4 +15,4 @@ var fluctuationFactors = {
     fluctuationMean: 0,
     fluctuationStdDev: 1
   }
-}
+};

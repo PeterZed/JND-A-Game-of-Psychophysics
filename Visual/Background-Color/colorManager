@@ -1,4 +1,4 @@
-var changeColor = {
+var colorManager = {
   randomizeColorAttributes(color) {
     var hue = randomNumbers.getRandomNumber() * 360;
     var saturation = randomNumbers.getRandomNumber() * 100;

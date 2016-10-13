@@ -3,22 +3,3 @@ var backgroundColor = {
   saturation: null,
   lightness: null
 };
-
-var fluctuationFactors = {
-  time: {
-    waitTimeMean: 1000, // milliseconds
-    waitTimeStandardDeviation: 0 // milliseconds;
-  },
-  hue: {
-    fluctuationMean: 0,
-    fluctuationStdDev: 1
-  },
-  saturation: {
-    fluctuationMean: 0,
-    fluctuationStdDev: 1
-  },
-  lightness: {
-    fluctuationMean: 0,
-    fluctuationStdDev: 1
-  }
-}

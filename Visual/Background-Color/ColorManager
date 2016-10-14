@@ -14,15 +14,15 @@ function ColorManager() {
       color.saturation + "%, " + color.lightness + "%)";
   };
   
-  this.fluctuateBackgroundColor = function(color, fluctuationFactors) {
-    var fluctuatingAttribute = this.determineFluctuatingAttribute(color);
+  this.fluctuateBackgroundColor = function(backgroundColor, fluctuationFactors) {
+    var fluctuatingAttribute = this.determineFluctuatingAttribute();
     
-    this.fluctuateAttribute(color, fluctuationFactors, fluctuatingAttribute);
-    this.checkLimitsOfAttributes(color);
-    this.setBackgroundColor(color);  
+    this.fluctuateAttribute(backgroundColor, fluctuationFactors, fluctuatingAttribute);
+    this.checkLimitsOfAttributes(backgroundColor);
+    this.setBackgroundColor(backgroundColor);  
   };
   
-  this.determineFluctuatingAttribute = function(color) {
+  this.determineFluctuatingAttribute = function() {
     var randomRoll = randomNumbers.getRandomNumber();
  
     if (randomRoll <= 1/3) {

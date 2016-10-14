@@ -1,0 +1,66 @@
+function ColorManager() {
+  this.randomizeColorAttributes = function(color) {
+    var red = randomNumbers.getRandomNumber() * 255;
+    var green = randomNumbers.getRandomNumber() * 255;
+    var blue = randomNumbers.getRandomNumber() * 255;
+  
+    color.red = UnbiasedRounding.statisticiansRounding(red, 0);
+    color.green = UnbiasedRounding.statisticiansRounding(green, 0);
+    color.blue = UnbiasedRounding.statisticiansRounding(blue, 0);
+  };
+  
+  this.setBackgroundColor = function(color) {
+    document.body.style.backgroundColor = "rgb(" + color.red + ", " +
+      color.green + ", " + color.blue + ")";
+  };
+  
+  this.fluctuateBackgroundColor = function(backgroundColor, fluctuationFactors) {
+    var fluctuatingAttribute = this.determineFluctuatingAttribute();
+    
+    this.fluctuateAttribute(backgroundColor, fluctuationFactors, fluctuatingAttribute);
+    this.checkLimitsOfAttributes(backgroundColor);
+    this.setBackgroundColor(backgroundColor);  
+  };
+  
+  this.determineFluctuatingAttribute = function() {
+    var randomRoll = randomNumbers.getRandomNumber();
+ 
+    if (randomRoll <= 1/3) {
+      return "red";
+    } else if (randomRoll <= 2/3) {
+      return "green";
+    } else if (randomRoll <= 1) {
+      return "blue";
+    }
+  };
+  
+  this.fluctuateAttribute = function(color, fluctuationFactors, fluctuatingAttribute) {
+    var mean = fluctuationFactors[fluctuatingAttribute].fluctuationMean;
+    var variance = Math.pow(fluctuationFactors[fluctuatingAttribute].fluctuationStdDev, 2);
+  
+    var distribution = gaussian(mean, variance);
+    var sample = distribution.ppf(randomNumbers.getRandomNumber());
+  
+    color[fluctuatingAttribute] += sample;
+  };
+  
+  this.checkLimitsOfAttributes = function(color) {
+    if (color.red < 0) {
+      color.red = 0;
+    } else if (color.red > 255) {
+      color.red = 255;
+    }
+  
+    if (color.green < 0) {
+      color.green = 0;
+    } else if (color.green > 255) {
+      color.saturation = 255;
+    }
+  
+    if (color.blue < 0) {
+      color.blue = 0;
+    } else if (color.blue > 255) {
+      color.blue = 255;
+    }
+  };
+}

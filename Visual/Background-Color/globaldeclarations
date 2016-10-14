@@ -1,0 +1,3 @@
+var backgroundColor = new BackgroundColor();
+const FLUCTUATION_FACTORS = new FluctuationFactors();
+const COLOR_MANAGER = new ColorManager();

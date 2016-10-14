@@ -1,0 +1,21 @@
+function FluctuationFactors() {
+  this.time = {
+    waitTimeMean: 1000, // milliseconds
+    waitTimeStandardDeviation: 0 // milliseconds;
+  };
+  
+  this.red = {
+    fluctuationMean: 0,
+    fluctuationStdDev: 1
+  };
+  
+  this.green = {
+    fluctuationMean: 0,
+    fluctuationStdDev: 1
+  };
+
+  this.blue = {
+    fluctuationMean: 0,
+    fluctuationStdDev: 1
+  };
+}

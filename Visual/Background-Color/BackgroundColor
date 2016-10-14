@@ -1,0 +1,7 @@
+// The color attributes can be passed in and utilized, or else they can stay undefined until
+// initialized by a ColorManager's methods.
+function BackgroundColor(red, green, blue) {
+  this.red = red;
+  this.green = green;
+  this.blue = blue;
+}

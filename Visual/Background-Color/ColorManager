@@ -1,5 +1,5 @@
-var colorManager = {
-  randomizeColorAttributes(color) {
+function ColorManager() {
+  this.randomizeColorAttributes = function(color) {
     var hue = randomNumbers.getRandomNumber() * 360;
     var saturation = randomNumbers.getRandomNumber() * 100;
     var lightness = randomNumbers.getRandomNumber() * 100;
@@ -7,22 +7,22 @@ var colorManager = {
     color.hue = UnbiasedRounding.statisticiansRounding(hue, 0);
     color.saturation = UnbiasedRounding.statisticiansRounding(saturation, 0);
     color.lightness = UnbiasedRounding.statisticiansRounding(lightness, 0);
-  },
+  };
   
-  setBackgroundColor(color) {
+  this.setBackgroundColor = function(color) {
     document.body.style.backgroundColor = "hsl(" + color.hue + ", " +
       color.saturation + "%, " + color.lightness + "%)";
-  },
+  };
   
-  fluctuateBackgroundColor(color) {
+  this.fluctuateBackgroundColor = function(color) {
     var fluctuatingAttribute = this.determineFluctuatingAttribute(color);
     
     this.fluctuateAttribute(color, fluctuatingAttribute);
     this.checkLimitsOfAttributes(color);
     this.setBackgroundColor(color);  
-  },
+  };
   
-  determineFluctuatingAttribute(color) {
+  this.determineFluctuatingAttribute = function(color) {
     var randomRoll = randomNumbers.getRandomNumber();
  
     if (randomRoll <= 1/3) {
@@ -32,9 +32,9 @@ var colorManager = {
     } else if (randomRoll <= 1) {
       return "lightness";
     }
-  },
+  };
   
- fluctuateAttribute(color, fluctuatingAttribute) {
+  this.fluctuateAttribute = function(color, fluctuationFactors, fluctuatingAttribute) {
     var mean = fluctuationFactors[fluctuatingAttribute].fluctuationMean;
     var variance = Math.pow(fluctuationFactors[fluctuatingAttribute].fluctuationStdDev, 2);
   
@@ -42,9 +42,9 @@ var colorManager = {
     var sample = distribution.ppf(randomNumbers.getRandomNumber());
   
     color[fluctuatingAttribute] += sample;
-  },
+  };
   
-  checkLimitsOfAttributes(color) {
+  this.checkLimitsOfAttributes = function(color) {
     if (color.hue < 0) {
       color.hue += 360;
     } else if (color.hue > 360) {
@@ -62,5 +62,5 @@ var colorManager = {
     } else if (color.lightness > 100) {
       color.lightness = 100;
     }
-  }
-};
+  };
+}

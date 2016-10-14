@@ -1,5 +1,5 @@
-var backgroundColor = {
-  hue: null,
-  saturation: null,
-  lightness: null
-};
+function BackgroundColor(hue, saturation, lightness) {
+  this.hue = hue;
+  this.saturation = saturation;
+  this.lightness = lightness;
+}

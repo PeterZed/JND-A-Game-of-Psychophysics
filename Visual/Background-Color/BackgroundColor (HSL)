@@ -1,5 +1,0 @@
-function BackgroundColor(hue, saturation, lightness) {
-  this.hue = hue;
-  this.saturation = saturation;
-  this.lightness = lightness;
-}

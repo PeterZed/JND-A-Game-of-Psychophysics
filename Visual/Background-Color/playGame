@@ -1,12 +1,12 @@
 function playGame() {
   var backgroundColor = new BackgroundColor();
-  var fluctuationFactors = new FluctuationFactors();
-  var colorManager = new ColorManager();
+  const FLUCTUATION_FACTORS = new FluctuationFactors();
+  const COLOR_MANAGER = new ColorManager();
   
-  colorManager.randomizeColorAttributes(backgroundColor);
-  colorManager.setBackgroundColor(backgroundColor);
+  COLOR_MANAGER.randomizeColorAttributes(backgroundColor);
+  COLOR_MANAGER.setBackgroundColor(backgroundColor);
   
   // For testing, so that clearInterval(colorInterval) can be run as needed
-  window.colorInterval = setInterval(colorManager.fluctuateBackgroundColor.bind(colorManager,
-    fluctuationFactors, backgroundColor), fluctuationFactors.time.waitTimeMean);
+  window.colorInterval = setInterval(COLOR_MANAGER.fluctuateBackgroundColor.bind(COLOR_MANAGER,
+    FLUCTUATION_FACTORS, backgroundColor), FLUCTUATION_FACTORS.time.waitTimeMean);
 }

@@ -3,6 +3,13 @@ function playGame() {
   COLOR_MANAGER.setBackgroundColor(backgroundColor);
   
   // For testing, so that clearInterval(colorInterval) can be run as needed
+  /*
   this.colorInterval = setInterval(COLOR_MANAGER.fluctuateBackgroundColor.bind(COLOR_MANAGER,
     FLUCTUATION_FACTORS, backgroundColor), FLUCTUATION_FACTORS.time.waitTimeMean);
+  */
+  
+  while (true) {
+    COLOR_MANAGER.fluctuateBackgroundColor(FLUCTUATION_FACTORS, backgroundColor); 
+    setTimeout(null, FLUCTUATION_FACTORS.time.waitTimeMean);
+  }
 }

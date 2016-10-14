@@ -1,18 +1,21 @@
-var fluctuationFactors = {
-  time: {
+function FluctuationFactors() {
+  this.time = {
     waitTimeMean: 1000, // milliseconds
     waitTimeStandardDeviation: 0 // milliseconds;
-  },
-  hue: {
+  };
+  
+  this.hue = {
     fluctuationMean: 0,
     fluctuationStdDev: 1
-  },
-  saturation: {
+  };
+  
+  this.saturation = {
     fluctuationMean: 0,
     fluctuationStdDev: 1
-  },
-  lightness: {
+  };
+
+  this.lightness = {
     fluctuationMean: 0,
     fluctuationStdDev: 1
-  }
-};
+  };
+}

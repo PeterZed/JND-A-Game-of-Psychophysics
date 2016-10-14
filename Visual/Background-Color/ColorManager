@@ -14,10 +14,10 @@ function ColorManager() {
       color.saturation + "%, " + color.lightness + "%)";
   };
   
-  this.fluctuateBackgroundColor = function(color) {
+  this.fluctuateBackgroundColor = function(color, fluctuationFactors) {
     var fluctuatingAttribute = this.determineFluctuatingAttribute(color);
     
-    this.fluctuateAttribute(color, fluctuatingAttribute);
+    this.fluctuateAttribute(color, fluctuationFactors, fluctuatingAttribute);
     this.checkLimitsOfAttributes(color);
     this.setBackgroundColor(color);  
   };
